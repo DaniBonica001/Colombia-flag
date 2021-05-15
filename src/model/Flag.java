@@ -8,41 +8,16 @@ public class Flag {
 	public final static String RIGHT = ESC+"C";
 	public final static String LEFT  = ESC+"D";
 	public final static String NXLN  = ESC+"1E";
-	
-	public final static String YELLOW = ESC+"43m"+ESC+"33m";
-	public final static String BLUE = ESC+"44m"+ESC+"34m";
-	public final static String RED = ESC+"41m"+ESC+"31m";
-	
-	public final static int[] TEXT_FORMAT = new int[] 
-			{0,1,22,4,24,27,31,32,33,34,35,36,37,
-			 40,41,42,43,44,45,46,47,48,90,91,92,93,94,
-			 95,96,97,100,101,102,103,104,105,106,107};
-	
-	/*
-	private int maximum;
-	public Flag(int max) {
-		maximum = max;
-	}
-	*/
-	
-	
-	
+
 	public void advanceColor(int start, int end,String colorb,String colorf) throws InterruptedException {
-		
 		char symbol = '*';
-		int sleep = 50;		
+		int sleep = 30;		
 		int width = 1;
 		int maxH = end;
-		int maxW = 10;
-		//int color = 0;
-		//boolean mode = true;
+		int maxW = 10;	
 		String dir1 = DOWN;
-		//String dir2 = LEFT;
 		
-		//System.out.print(ESC+"2J");//Clear screen
-		//System.out.print(ESC+"0G"+ESC+"0d");//Cursor in 0,0
-		
-		
+		System.out.print(ESC+"0G"+ESC+String.valueOf(start)+"d");
 		Thread.sleep(sleep);
 		
 		while (width<maxW) {
@@ -56,16 +31,11 @@ public class Flag {
 				System.out.print(LEFT);
 				pass = dir1;
 			}			
-			//String col = String.valueOf(width);
-			//String move = col+"d";
-			
+					
 			System.out.print(RIGHT);
 			System.out.print(ESC+String.valueOf(start)+"d");
 		
 			width++;
-		}
-	
-			
-				
+		}				
 	}
 }

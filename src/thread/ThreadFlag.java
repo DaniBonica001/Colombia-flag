@@ -20,7 +20,7 @@ public class ThreadFlag extends Thread{
 	
 	public void run() {
 		try {
-			flag.advanceColor(start,end,colorBackground,colorFont);
+			flag.advanceColor(start,end,colorBackground,colorFont);			
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}		
