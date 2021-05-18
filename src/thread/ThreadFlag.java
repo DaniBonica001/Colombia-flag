@@ -20,6 +20,7 @@ public class ThreadFlag extends Thread{
 	
 	public void run() {
 		try {
+			System.out.print("\u001b[0G"+"\u001b["+String.valueOf(start)+"d");
 			flag.advanceColor(start,end,colorBackground,colorFont);			
 		} catch (InterruptedException e) {
 			e.printStackTrace();

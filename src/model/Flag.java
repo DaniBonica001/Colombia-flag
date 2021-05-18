@@ -11,13 +11,13 @@ public class Flag {
 
 	public void advanceColor(int start, int end,String colorb,String colorf) throws InterruptedException {
 		char symbol = '*';
-		int sleep = 30;		
+		int sleep = 10;		
 		int width = 1;
 		int maxH = end;
-		int maxW = 10;	
+		int maxW = 150;	
 		String dir1 = DOWN;
 		
-		System.out.print(ESC+"0G"+ESC+String.valueOf(start)+"d");
+		//System.out.print(ESC+"0G"+ESC+String.valueOf(start)+"d");
 		Thread.sleep(sleep);
 		
 		while (width<maxW) {
@@ -26,7 +26,7 @@ public class Flag {
 			while(height<maxH) {
 				height++;
 				System.out.print(pass);
-				System.out.print(colorb+colorf +symbol);
+				System.out.print(ESC+String.valueOf(width-1)+"G"+ESC+String.valueOf(height)+"d"+colorb+colorf +symbol);
 				Thread.sleep(sleep);
 				System.out.print(LEFT);
 				pass = dir1;
