@@ -14,7 +14,7 @@ public class Flag {
 		int sleep = 10;		
 		int width = 1;
 		int maxH = end;
-		int maxW = 150;	
+		int maxW = 100;	
 		String dir1 = DOWN;
 		
 		//System.out.print(ESC+"0G"+ESC+String.valueOf(start)+"d");
