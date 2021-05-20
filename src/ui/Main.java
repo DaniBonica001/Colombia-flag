@@ -9,9 +9,9 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException  {
 		Flag flag = new Flag ();
-		ThreadFlag tf1 = new ThreadFlag(flag,"\u001b[43m","\u001b[33m",0,12);
-		ThreadFlag tf2 = new ThreadFlag(flag,"\u001b[44m","\u001b[34m",12,21);
-		ThreadFlag tf3 = new ThreadFlag(flag,"\u001b[41m","\u001b[31m",21,30); 
+		ThreadFlag tf1 = new ThreadFlag(flag,"\u001b[43m","\u001b[33m",0,10);
+		ThreadFlag tf2 = new ThreadFlag(flag,"\u001b[44m","\u001b[34m",10,15);
+		ThreadFlag tf3 = new ThreadFlag(flag,"\u001b[41m","\u001b[31m",15,20); 
 		
 		
 		System.out.print(ESC+"2J");//Clear screen
@@ -24,7 +24,7 @@ public class Main {
 		tf2.join();
 		tf3.join();
 		
-		System.out.print(ESC+"0G"+ESC+"32d");//Cursor in 0,32
+		System.out.print(ESC+"0G"+ESC+"21d");//Cursor in 0,32
 		System.out.println("\u001B[0m");
 		System.out.println("FIN");
 		

@@ -14,7 +14,7 @@ public class Flag {
 		int sleep = 10;		
 		int width = 1;
 		int maxH = end;
-		int maxW = 100;	
+		int maxW = 150;	
 		String dir1 = DOWN;
 		
 		Thread.sleep(sleep);
