@@ -15,15 +15,9 @@ public class Main {
 		
 		
 		System.out.print(ESC+"2J");//Clear screen
-		//System.out.print(ESC+"0G"+ESC+"0d");//Cursor in 0,0
+		
 		tf1.start();		
-		//tf1.join();
-		
-		//System.out.print(ESC+"0G"+ESC+"13d");//Cursor in 0,13
 		tf2.start();		
-		//tf2.join();
-		
-		//System.out.print(ESC+"0G"+ESC+"22d");//Cursor in 0,22
 		tf3.start();		
 		
 		tf1.join();

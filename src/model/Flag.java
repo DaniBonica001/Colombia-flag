@@ -17,7 +17,6 @@ public class Flag {
 		int maxW = 100;	
 		String dir1 = DOWN;
 		
-		//System.out.print(ESC+"0G"+ESC+String.valueOf(start)+"d");
 		Thread.sleep(sleep);
 		
 		while (width<maxW) {
