@@ -7,8 +7,10 @@ public class Flag {
 	public final static String DOWN  = ESC+"B";
 	public final static String RIGHT = ESC+"C";
 	public final static String LEFT  = ESC+"D";
-	public final static String NXLN  = ESC+"1E";
-
+	
+	public Flag() {		
+	}
+	
 	public void advanceColor(int start, int end,String colorb,String colorf) throws InterruptedException {
 		char symbol = '*';
 		int sleep = 10;		

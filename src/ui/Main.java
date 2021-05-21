@@ -5,14 +5,13 @@ import thread.ThreadFlag;
 
 public class Main {
 
-	public final static String ESC   = "\u001b[";
+	public final static String ESC= "\u001b[";
 
 	public static void main(String[] args) throws InterruptedException  {
 		Flag flag = new Flag ();
 		ThreadFlag tf1 = new ThreadFlag(flag,"\u001b[43m","\u001b[33m",0,10);
 		ThreadFlag tf2 = new ThreadFlag(flag,"\u001b[44m","\u001b[34m",10,15);
 		ThreadFlag tf3 = new ThreadFlag(flag,"\u001b[41m","\u001b[31m",15,20); 
-		
 		
 		System.out.print(ESC+"2J");//Clear screen
 		
